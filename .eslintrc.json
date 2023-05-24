@@ -1,0 +1,31 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true, 
+    "es2021": true
+  },
+  "plugins": [
+    "react",
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  "rules": {
+    "no-unused-vars": "off",
+    "jsx-quotes": ["error", "prefer-double"],
+    "prettier/prettier": [
+      "error",
+      {
+        "max-len": ["error", 140, 2],
+        "singleQuote": true,
+        "semi": true
+      }
+    ]
+  }
+}

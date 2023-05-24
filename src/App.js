@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
 
-function App() {
+import Canvas from 'Components/Canvas';
+import Home from 'Pages/Home';
+
+const App = () => {
+  useEffect(() => {
+    window.addEventListener('resize', onResize);
+    onResize();
+  }, []);
+
+  const onResize = () => {
+    const app = document.querySelector('.application');
+    app.style.setProperty('--vh', `${window.innerHeight / 100}px`);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="application">
+      <Canvas />
+      <Home />
+    </main>
   );
-}
+};
 
 export default App;
