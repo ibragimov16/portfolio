@@ -14,7 +14,7 @@ const Home = observer(() => {
               key={i}
               data={project}
               index={i + 1}
-              style={{ animationDelay: `${i * 100}ms` }}
+              style={{ animationDelay: `${(i + 1) * 100}ms` }}
             />
           ))}
         </div>

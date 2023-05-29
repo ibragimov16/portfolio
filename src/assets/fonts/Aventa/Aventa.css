@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Aventa';
+    src: url('Aventa-Thin.eot');
+    src: local('Aventa Thin'), local('Aventa-Thin'),
+        url('Aventa-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Aventa-Thin.woff2') format('woff2'),
+        url('Aventa-Thin.woff') format('woff'),
+        url('Aventa-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aventa Extra';
+    src: url('Aventa-ExtraLight.eot');
+    src: local('Aventa Extra Light'), local('Aventa-ExtraLight'),
+        url('Aventa-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Aventa-ExtraLight.woff2') format('woff2'),
+        url('Aventa-ExtraLight.woff') format('woff'),
+        url('Aventa-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aventa';
+    src: url('Aventa-Light.eot');
+    src: local('Aventa Light'), local('Aventa-Light'),
+        url('Aventa-Light.eot?#iefix') format('embedded-opentype'),
+        url('Aventa-Light.woff2') format('woff2'),
+        url('Aventa-Light.woff') format('woff'),
+        url('Aventa-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aventa';
+    src: url('Aventa-Regular.eot');
+    src: local('Aventa'), local('Aventa-Regular'),
+        url('Aventa-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Aventa-Regular.woff2') format('woff2'),
+        url('Aventa-Regular.woff') format('woff'),
+        url('Aventa-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aventa';
+    src: url('Aventa-Medium.eot');
+    src: local('Aventa Medium'), local('Aventa-Medium'),
+        url('Aventa-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Aventa-Medium.woff2') format('woff2'),
+        url('Aventa-Medium.woff') format('woff'),
+        url('Aventa-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aventa Semi';
+    src: url('Aventa-SemiBold.eot');
+    src: local('Aventa Semi Bold'), local('Aventa-SemiBold'),
+        url('Aventa-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Aventa-SemiBold.woff2') format('woff2'),
+        url('Aventa-SemiBold.woff') format('woff'),
+        url('Aventa-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aventa';
+    src: url('Aventa-Bold.eot');
+    src: local('Aventa Bold'), local('Aventa-Bold'),
+        url('Aventa-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Aventa-Bold.woff2') format('woff2'),
+        url('Aventa-Bold.woff') format('woff'),
+        url('Aventa-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aventa Extra';
+    src: url('Aventa-ExtraBold.eot');
+    src: local('Aventa Extra Bold'), local('Aventa-ExtraBold'),
+        url('Aventa-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Aventa-ExtraBold.woff2') format('woff2'),
+        url('Aventa-ExtraBold.woff') format('woff'),
+        url('Aventa-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aventa';
+    src: url('Aventa-Black.eot');
+    src: local('Aventa Black'), local('Aventa-Black'),
+        url('Aventa-Black.eot?#iefix') format('embedded-opentype'),
+        url('Aventa-Black.woff2') format('woff2'),
+        url('Aventa-Black.woff') format('woff'),
+        url('Aventa-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
