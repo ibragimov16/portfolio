@@ -1,15 +1,32 @@
 {
-  "short_name": "Портфолио",
-  "name": "Портфолио",
+  "name": "ARTUR IBRAGIMOV - PORTFOLIO",
+  "short_name": "AI PORTFOLIO",
+  "description": "description",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "favicon.png",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "256x256",
       "type": "image/png"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#000000"
+  ]
 }

@@ -4,12 +4,11 @@ import Canvas from 'Components/Canvas';
 import Home from 'Pages/Home';
 
 const App = () => {
-  useEffect(() => {
-    window.addEventListener('resize', onResize);
-    onResize();
-  }, []);
+  useEffect(() => onResize(), []);
 
   const onResize = () => {
+    window.requestAnimationFrame(onResize);
+
     const app = document.querySelector('.application');
     app.style.setProperty('--vh', `${window.innerHeight / 100}px`);
   };

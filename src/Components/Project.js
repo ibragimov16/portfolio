@@ -21,7 +21,6 @@ const Project = ({ data, style }) => {
 };
 
 Project.propTypes = {
-  index: PropTypes.number,
   style: PropTypes.object,
   data: PropTypes.object,
 };
