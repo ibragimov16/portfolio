@@ -1,27 +1,34 @@
 export const projects = [
   {
-    id: 1,
+    id: 10,
+    name: 'ATM Virtual',
+    url: 'https://atmvirtual.pl/',
+    description: '',
+    preview: null
+  },
+  {
+    id: 9,
     name: 'HART Estate',
     url: 'https://hart-estate.ru/',
     description: '',
     preview: null
   },
   {
-    id: 2,
+    id: 8,
     name: 'Prostokvashino',
     url: 'https://ferma.prostokvashino.ru/',
     description: '',
     preview: null
   },
   {
-    id: 3,
+    id: 7,
     name: 'Apogey',
     url: 'https://apogey-mebel.ru/',
     description: '',
     preview: null
   },
   {
-    id: 4,
+    id: 6,
     name: 'White Frame',
     url: 'https://whiteframe.ru/',
     description: '',
@@ -35,28 +42,28 @@ export const projects = [
     preview: null
   },
   {
-    id: 6,
+    id: 4,
     name: 'Graver-Laser',
     url: 'https://graver-laser.com/',
     description: '',
     preview: null
   },
   {
-    id: 7,
+    id: 3,
     name: 'Skydiving',
     url: 'https://skydiving.zone/ru/dropzone',
     description: '',
     preview: null
   },
   {
-    id: 8,
+    id: 2,
     name: 'Godji Game',
     url: 'https://godjigame.io/',
     description: '',
     preview: null
   },
   {
-    id: 9,
+    id: 1,
     name: 'Strizhman',
     url: 'http://strizhman.ru/',
     description: '',

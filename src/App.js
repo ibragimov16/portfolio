@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
 import Canvas from 'Components/Canvas';
+import Cursor from 'Components/Cursor';
 import Home from 'Pages/Home';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
 
   return (
     <main className="application">
+      <Cursor />
       <Canvas />
       <Home />
     </main>

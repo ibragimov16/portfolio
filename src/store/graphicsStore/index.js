@@ -34,15 +34,15 @@ class Store {
 
     this.xTo = gsap.quickTo(this.camera.position, 'x', {
       ease: 'back',
-      duration: 0.75,
+      duration: 1
     });
     this.yTo = gsap.quickTo(this.camera.position, 'y', {
       ease: 'back',
-      duration: 0.75,
+      duration: 1
     });
     this.zTo = gsap.quickTo(this.camera.position, 'z', {
       ease: 'back',
-      duration: 0.75,
+      duration: 1
     });
 
     this.createText();
@@ -92,17 +92,17 @@ class Store {
     const text1 = new Text({
       text: 'ARTUR',
       position: new Vector3(-5, -0.5, 12),
-      rotation: new Euler(-Math.PI / 2, 0, Math.PI / 2),
+      rotation: new Euler(-Math.PI / 2, 0, Math.PI / 2)
     });
     const text2 = new Text({
       text: 'IBRAGIMOV',
       position: new Vector3(1, -0.5, 12),
-      rotation: new Euler(-Math.PI / 2, 0, Math.PI / 2),
+      rotation: new Euler(-Math.PI / 2, 0, Math.PI / 2)
     });
     const text3 = new Text({
       text: 'PORTFOLIO',
       position: new Vector3(7, -0.5, 12),
-      rotation: new Euler(-Math.PI / 2, 0, Math.PI / 2),
+      rotation: new Euler(-Math.PI / 2, 0, Math.PI / 2)
     });
 
     this.scene.add(text1, text2, text3);

@@ -1,0 +1,29 @@
+.custom-cursor
+  --cursor-x: -10
+  --cursor-y: -10
+  position: fixed
+  left: 0
+  top: 0
+  transform: translate(calc(var(--cursor-x) * 1px), calc(var(--cursor-y) * 1px))
+  transition: mix-blend-mode 300ms
+  transition-timing-function: cubic-bezier(.3,.1,.2,1)
+  pointer-events: none
+  mix-blend-mode: difference
+  z-index: 99999
+  @media (any-pointer: coarse)
+    display: none
+  @media #{$tablet}, #{$mobile}
+    display: none
+  &__dot
+    position: absolute
+    left: -8px
+    top: -8px
+    width: 16px
+    height: 16px
+    border-radius: 10px
+    background-color: $white
+    transition-property: transform, opacity, border-radius, width, height, background-color
+    transition-duration: 300ms
+    transition-timing-function: cubic-bezier(.3,.1,.2,1)
+    @at-root .custom-cursor--scale &
+      transform: scale(3.5)

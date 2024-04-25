@@ -22,23 +22,22 @@ class Text extends Group {
       curveSegments: 100,
       height: 1.2,
       size: 4,
-      font,
+      font
     });
 
     geometry.computeBoundingBox();
-    const { min, max } = geometry.boundingBox;
 
     const material = new ShaderMaterial({
       uniforms: {
         color1: { value: new Color(0x000000) },
         color2: { value: new Color(0x000000) },
         color3: { value: new Color(0x5a5a5a) },
-        bboxMin: { value: min },
-        bboxMax: { value: max },
+        bboxMin: { value: geometry.boundingBox.min },
+        bboxMax: { value: geometry.boundingBox.max }
       },
       fragmentShader: fragment,
       vertexShader: vertex,
-      side: DoubleSide,
+      side: DoubleSide
     });
 
     this.mesh = new Mesh(geometry, material);

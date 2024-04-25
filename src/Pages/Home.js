@@ -8,7 +8,12 @@ const Home = observer(() => {
   return (
     <section className="home-page">
       <div className="content">
-        <a className="telegram-link" href={telegramLink} target="_blank" rel="noreferrer">
+        <a
+          className="telegram-link cursor-scale"
+          href={telegramLink}
+          target="_blank"
+          rel="noreferrer"
+        >
           @{telegramNickname}
         </a>
 
@@ -23,6 +28,7 @@ const Home = observer(() => {
             <Project
               key={index}
               data={project}
+              index={index + 1}
               style={{ animationDelay: `${(index + 1) * 100}ms` }}
             />
           ))}
