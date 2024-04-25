@@ -1,5 +1,6 @@
-import { observer } from 'mobx-react';
+import { telegramLink, telegramNickname } from 'config';
 import { projects } from 'data/projects';
+import { observer } from 'mobx-react';
 
 import Project from 'Components/Project';
 
@@ -7,29 +8,22 @@ const Home = observer(() => {
   return (
     <section className="home-page">
       <div className="content">
-        <a
-          className="telegram-link"
-          href="https://t.me/ibragimov16"
-          target="_blank"
-          rel="noreferrer"
-        >
-          @ibragimov16
+        <a className="telegram-link" href={telegramLink} target="_blank" rel="noreferrer">
+          @{telegramNickname}
         </a>
 
         <div className="title">
           <h1>
-            A collection of <br /> Front-End projects <br />{' '}
-            <span>by Artur Ibragimov</span>
+            A collection of <br /> Front-End projects <br /> <span>by Artur Ibragimov</span>
           </h1>
         </div>
 
         <div className="projects-list">
-          {projects.map((project, i) => (
+          {projects.map((project, index) => (
             <Project
-              key={i}
+              key={index}
               data={project}
-              index={i + 1}
-              style={{ animationDelay: `${(i + 1) * 100}ms` }}
+              style={{ animationDelay: `${(index + 1) * 100}ms` }}
             />
           ))}
         </div>

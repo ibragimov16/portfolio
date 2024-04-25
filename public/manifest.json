@@ -1,12 +1,12 @@
 {
   "name": "ARTUR IBRAGIMOV - PORTFOLIO",
   "short_name": "AI PORTFOLIO",
-  "description": "description",
+  "description": "",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
-  "orientation": "portrait",
+  "orientation": "landscape",
   "icons": [
     {
       "src": "/favicon.ico",

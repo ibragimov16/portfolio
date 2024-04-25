@@ -1,30 +1,29 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { observer } from 'mobx-react';
 import { graphicsStore } from 'store';
 
 const Canvas = observer(() => {
-  const getContainer = () => document.querySelector('.canvas');
+  const ref = useRef();
 
   const onResize = () => {
-    const { offsetWidth, offsetHeight } = getContainer();
+    const { offsetWidth, offsetHeight } = ref.current;
     const size = Math.max(offsetWidth, offsetHeight);
     graphicsStore.updateWindowSize(size, size);
   };
 
   useEffect(() => {
-    const container = getContainer();
-    container.appendChild(graphicsStore.renderer.domElement);
+    ref.current.appendChild(graphicsStore.renderer.domElement);
 
     const observer = new ResizeObserver(onResize);
-    observer.observe(container);
+    observer.observe(ref.current);
 
     return () => {
+      ref.current.innerHTML = '';
       observer.disconnect();
-      container.innerHTML = '';
     };
   }, []);
 
-  return <div className="canvas" />;
+  return <div className="canvas" ref={ref} />;
 });
 
 export default Canvas;
