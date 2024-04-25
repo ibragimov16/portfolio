@@ -1,11 +1,34 @@
+import { Color, DoubleSide, Group, Mesh, ShaderMaterial } from 'three';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 import { Font } from 'three/addons/loaders/FontLoader.js';
-import { Color, DoubleSide, Group, Mesh, ShaderMaterial, Vector3 } from 'three';
-import { fragment, vertex } from './textShader';
 
 import Aventa from 'assets/fonts/Aventa/Aventa-Thin.json';
 
 const font = new Font(Aventa);
+
+const vertex = `
+  uniform vec3 bboxMin;
+  uniform vec3 bboxMax;
+
+  varying vec3 vUv;
+
+  void main() {
+    vUv.z = (position.z - bboxMin.z) / (bboxMax.z - bboxMin.z);
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+  }
+`;
+
+const fragment = `
+  uniform vec3 color1;
+  uniform vec3 color2;
+  uniform vec3 color3;
+
+  varying vec3 vUv;
+
+  void main() {
+    gl_FragColor = vec4(mix(mix(color1, color2, vUv.z), mix(color2, color3, vUv.z), vUv.z), 1.0);
+  }
+`;
 
 class Text extends Group {
   isText = true;

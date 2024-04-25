@@ -19,14 +19,17 @@
 
 html, body
   background-color: $black
+  overflow: hidden
   &::-webkit-scrollbar
     display: none
 
 .application
-  position: absolute
-  left: 0
-  top: 0
+  --aspect-ratio: 16/9
+  --vh: 1
+  position: relative
   width: 100%
+  height: calc(100 * var(--vh))
+  overflow: auto
   font-size: 20px
   z-index: 10
 

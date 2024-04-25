@@ -1,7 +1,5 @@
 .home-page
-  position: absolute
-  left: 0
-  top: 0
+  position: relative
   width: 100%
   z-index: 1
   isolation: isolate
@@ -9,6 +7,8 @@
     display: flex
     align-items: flex-start
     justify-content: flex-start
+    @media #{$tablet}
+      flex-direction: column
     .telegram-link
       position: fixed
       left: 60px
@@ -16,7 +16,17 @@
       transform: translate(0, -50%) rotate(180deg)
       writing-mode: vertical-rl
       animation: fadeIn 1250ms cubic-bezier(.3,.1,.2,1) forwards
+      font-size: 20px
       opacity: 0
+      @media #{$tablet}
+        right: 60px
+        left: unset
+        transform: translate(0, -50%)
+        top: 140px
+      @media #{$mobile}
+        font-size: 16px
+        right: 30px
+        top: 100px
     .title
       width: 50%
       position: sticky
@@ -25,6 +35,13 @@
       top: 0
       animation: fadeIn 1250ms cubic-bezier(.3,.1,.2,1) forwards
       opacity: 0
+      @media #{$tablet}
+        position: relative
+        padding: 100px 60px 50px 60px
+        width: 60%
+      @media #{$mobile}
+        padding: 70px 30px 30px 30px
+        width: 70%
       h1
         text-transform: uppercase
         font-size: 3.14vw
@@ -32,6 +49,8 @@
         align-items: flex-start
         justify-content: flex-start
         flex-direction: column
+        @media #{$mobile}
+          font-size: 4vw
         span
           margin-left: auto
           font-size: inherit
@@ -42,6 +61,12 @@
       flex-direction: column
       align-items: flex-start
       justify-content: flex-start
+      @media #{$tablet}
+        padding: 50px 60px 100px 60px
+        gap: 20px
+        width: 100%
+      @media #{$mobile}
+        padding: 30px 30px 70px 30px
     .project
       display: flex
       align-items: flex-start
@@ -66,6 +91,8 @@
           white-space: nowrap
           width: 100%
           transition: opacity .3s
+          @media #{$tablet}
+            font-size: 16vw
         &-outline
           position: absolute
           left: 0
@@ -83,3 +110,6 @@
         transform: scale(2, 1)
         transform-origin: 0 50%
         color: transparentize($white, 0.3)
+        @media #{$tablet}
+          font-size: 3vw
+          margin-left: 3vw

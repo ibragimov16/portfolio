@@ -12,14 +12,15 @@ const App = () => {
 
     const app = document.querySelector('.application');
     app.style.setProperty('--vh', `${window.innerHeight / 100}px`);
+    app.style.setProperty('--aspect-ratio', window.innerWidth / window.innerHeight);
   };
 
   return (
-    <main className="application">
+    <>
       <Cursor />
       <Canvas />
       <Home />
-    </main>
+    </>
   );
 };
 
