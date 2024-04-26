@@ -1,4 +1,3 @@
-import gsap from 'gsap';
 import {
   LinearMipMapLinearFilter,
   MeshStandardMaterial,
@@ -29,9 +28,7 @@ class Plane extends Group {
 
     this.material = new MeshStandardMaterial({
       color: new Color(0xffffff),
-      transparent: true,
-      side: DoubleSide,
-      opacity: 0
+      side: DoubleSide
     });
 
     this.mesh = new Mesh(this.geometry, this.material);
@@ -61,11 +58,6 @@ class Plane extends Group {
     texture.anisotropy = 8;
 
     this.mesh.material.map = texture;
-
-    gsap.quickTo(this.mesh.material, 'opacity', {
-      ease: 'power1',
-      duration: 1
-    })(1);
 
     return texture;
   }

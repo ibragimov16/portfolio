@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
-import { observer } from 'mobx-react';
 import { graphicsStore } from 'store';
+import { observer } from 'mobx-react';
+import { useEffect } from 'react';
 
 const Canvas = observer(() => {
   const getContainer = () => document.querySelector('.canvas');

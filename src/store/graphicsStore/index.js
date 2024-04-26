@@ -2,8 +2,9 @@ import { makeAutoObservable } from 'mobx';
 import { projects } from 'data/projects';
 import gsap from 'gsap';
 
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { AmbientLight, Box3, Clock, Color, Euler, Group, Scene, Vector3 } from 'three';
+import DeviceOrientationControls from './Core/DeviceOrientationControls';
+import Controls from './Core/Controls';
 import Renderer from './Core/Renderer';
 import Camera from './Core/Camera';
 import Plane from './Plane';
@@ -11,6 +12,8 @@ import Text from './Text';
 
 class Store {
   initialized = false;
+
+  deviceOrientationControls;
 
   planesGroup = new Group();
 
@@ -33,10 +36,10 @@ class Store {
 
     this.scene.background = new Color(0x000000);
 
-    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
-    this.controls.enabled = false;
+    this.deviceOrientationControls = new DeviceOrientationControls();
+    this.controls = new Controls(this.camera, this.renderer);
 
-    this.light = new AmbientLight(new Color(0xffffff), 1.25);
+    this.light = new AmbientLight(new Color(0xffffff), 1);
 
     this.planesGroup.position.set(1.5, 1.25, 0);
 
@@ -119,6 +122,7 @@ class Store {
     });
 
     window.addEventListener('mousemove', this.onPointerMove);
+    this.deviceOrientationControls.onUpdate = this.onDeviceMove;
   }
 
   onPointerMove = ({ x, y }) => {
@@ -127,6 +131,14 @@ class Store {
     const newY = 12 + (y - innerHeight / 2) / 350;
 
     this.xTo(newX);
+    this.yTo(newY);
+  };
+
+  onDeviceMove = ({ beta, gamma }) => {
+    const newX = this.camera.defaultPosition.x + gamma * 2;
+    this.xTo(newX);
+
+    const newY = this.camera.defaultPosition.y + beta * 2;
     this.yTo(newY);
   };
 

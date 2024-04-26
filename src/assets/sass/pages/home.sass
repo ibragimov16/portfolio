@@ -15,7 +15,7 @@
       top: 50%
       transform: translate(0, -50%) rotate(180deg)
       writing-mode: vertical-rl
-      animation: fadeIn 1250ms cubic-bezier(.3,.1,.2,1) forwards
+      animation: fadeIn 1000ms cubic-bezier(.3,.1,.2,1) forwards
       font-size: 20px
       opacity: 0
       @media #{$tablet}
@@ -33,15 +33,10 @@
       padding: 50px 30px 50px 60px
       left: 0
       top: 0
-      animation: fadeIn 1250ms cubic-bezier(.3,.1,.2,1) forwards
+      animation: fadeIn 1000ms cubic-bezier(.3,.1,.2,1) forwards
       opacity: 0
       @media #{$tablet}
-        position: relative
-        padding: 100px 60px 50px 60px
-        width: 60%
-      @media #{$mobile}
-        padding: 70px 30px 30px 30px
-        width: 70%
+        display: none
       h1
         text-transform: uppercase
         font-size: 3.14vw
@@ -49,8 +44,6 @@
         align-items: flex-start
         justify-content: flex-start
         flex-direction: column
-        @media #{$mobile}
-          font-size: 4vw
         span
           margin-left: auto
           font-size: inherit
@@ -62,18 +55,18 @@
       align-items: flex-start
       justify-content: flex-start
       @media #{$tablet}
-        padding: 50px 60px 100px 60px
+        padding: 100px 60px
         gap: 20px
         width: 100%
       @media #{$mobile}
-        padding: 30px 30px 70px 30px
+        padding: 70px 30px
     .project
       display: flex
       align-items: flex-start
       justify-content: flex-start
       transform: scale(0.5, 1)
       transform-origin: 0 50%
-      animation: fadeIn 1250ms cubic-bezier(.3,.1,.2,1) forwards
+      animation: fadeIn 1000ms cubic-bezier(.3,.1,.2,1) forwards
       opacity: 0
       &:hover
         .project__title-outline
@@ -92,7 +85,9 @@
           width: 100%
           transition: opacity .3s
           @media #{$tablet}
-            font-size: 16vw
+            font-size: 20vw
+          @media #{$mobile}
+            font-size: 23vw
         &-outline
           position: absolute
           left: 0
@@ -113,3 +108,66 @@
         @media #{$tablet}
           font-size: 3vw
           margin-left: 3vw
+        @media #{$mobile}
+          font-size: 4vw
+          margin-left: 4vw
+  .mobile-start
+    position: fixed
+    left: 0
+    top: 0
+    z-index: 10
+    width: 100%
+    height: 100%
+    background-color: transparentize($black, 0.5)
+    backdrop-filter: blur(10px)
+    padding: 15vh 30px
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    touch-action: none
+    pointer-events: none
+    transition: opacity 500ms cubic-bezier(.3,.1,.2,1)
+    opacity: 0
+    display: none
+    @media #{$tablet}
+      display: flex
+    &--active
+      pointer-events: unset
+      opacity: 1
+    .title
+      max-width: 100%
+      width: 320px
+      position: relative
+      padding-bottom: 50px
+      animation: fadeInUp 1000ms cubic-bezier(.3,.1,.2,1) forwards
+      opacity: 0
+      h1
+        text-transform: uppercase
+        font-size: 24px
+        display: flex
+        align-items: flex-start
+        justify-content: flex-start
+        flex-direction: column
+        span
+          margin-left: auto
+          font-size: inherit
+    &__button
+      background-color: transparentize($black, 0.25)
+      border-radius: 10px
+      padding: 13px 0 5px 0
+      border: 2px solid $white
+      max-width: 100%
+      width: 320px
+      animation: fadeInUp 1000ms cubic-bezier(.3,.1,.2,1) forwards
+      animation-delay: 250ms
+      opacity: 0
+      span
+        display: block
+        transform: scale(0.8, 1)
+        text-transform: uppercase
+        font-weight: 500
+        font-size: 40px
+        line-height: 100%
+        text-transform: uppercase
+        font-family: Bebas Neue
+        white-space: nowrap
