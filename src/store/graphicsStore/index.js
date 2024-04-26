@@ -36,7 +36,7 @@ class Store {
     this.controls = new OrbitControls(this.camera, this.renderer.domElement);
     this.controls.enabled = false;
 
-    this.light = new AmbientLight(new Color(0xffffff), 1);
+    this.light = new AmbientLight(new Color(0xffffff), 1.25);
 
     this.planesGroup.position.set(1.5, 1.25, 0);
 

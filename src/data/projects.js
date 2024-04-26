@@ -8,8 +8,16 @@ import project7 from 'assets/img/project-7.webp';
 import project8 from 'assets/img/project-8.webp';
 import project9 from 'assets/img/project-9.webp';
 import project10 from 'assets/img/project-10.webp';
+import project11 from 'assets/img/project-11.webp';
 
 export const projects = [
+  {
+    id: 11,
+    name: 'Rivox',
+    url: 'https://rivox.ru/',
+    description: '',
+    preview: project11
+  },
   {
     id: 10,
     name: 'ATM Virtual',
