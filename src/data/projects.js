@@ -9,8 +9,16 @@ import project8 from 'assets/img/project-8.webp';
 import project9 from 'assets/img/project-9.webp';
 import project10 from 'assets/img/project-10.webp';
 import project11 from 'assets/img/project-11.webp';
+import project12 from 'assets/img/project-12.webp';
 
 export const projects = [
+  {
+    id: 12,
+    name: 'Zila',
+    url: 'https://zila.ae/',
+    description: '',
+    preview: project12
+  },
   {
     id: 11,
     name: 'Rivox',
