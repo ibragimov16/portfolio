@@ -1,11 +1,13 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 
-import Canvas from 'Components/Canvas';
-import Cursor from 'Components/Cursor';
-import Home from 'Pages/Home';
+import Canvas from '@/components_/canvas_';
+import Cursor from '@/components_/cursor_';
+import Home from '@/pages_/home_';
 
-const App = () => {
-  useEffect(() => onResize(), []);
+export default function App() {
+  useLayoutEffect(() => {
+    onResize();
+  }, []);
 
   const onResize = () => {
     window.requestAnimationFrame(onResize);
@@ -22,6 +24,4 @@ const App = () => {
       <Home />
     </>
   );
-};
-
-export default App;
+}

@@ -2,7 +2,7 @@ import { Color, DoubleSide, Group, Mesh, ShaderMaterial } from 'three';
 import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
 import { Font } from 'three/addons/loaders/FontLoader.js';
 
-import Aventa from 'assets/fonts/Aventa/Aventa-Thin.json';
+import Aventa from '@/assets/fonts/Aventa/Aventa-Thin.json';
 
 const font = new Font(Aventa);
 

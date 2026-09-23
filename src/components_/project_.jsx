@@ -1,6 +1,4 @@
-import PropTypes from 'prop-types';
-
-const Project = ({ data, style, index }) => {
+function Project({ data, style, index }) {
   return (
     <a
       style={style}
@@ -16,12 +14,6 @@ const Project = ({ data, style, index }) => {
       <span className="project__id">{index > 9 ? index : `0${index}`}</span>
     </a>
   );
-};
-
-Project.propTypes = {
-  style: PropTypes.object,
-  index: PropTypes.number,
-  data: PropTypes.object
 };
 
 export default Project;

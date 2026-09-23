@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx';
-import { projects } from 'data/projects';
+import { projects } from '@/data/projects';
 import gsap from 'gsap';
 
 import { AmbientLight, Box3, Clock, Color, Euler, Group, Scene, Vector3 } from 'three';

@@ -1,8 +1,8 @@
-import { graphicsStore } from 'store';
+import graphicsStore from '@/graphicsStore';
 import { observer } from 'mobx-react';
 import { useEffect } from 'react';
 
-const Canvas = observer(() => {
+function Canvas() {
   const getContainer = () => document.querySelector('.canvas');
 
   const onResize = () => {
@@ -24,6 +24,6 @@ const Canvas = observer(() => {
   }, []);
 
   return <div className="canvas" />;
-});
+}
 
-export default Canvas;
+export default observer(Canvas);

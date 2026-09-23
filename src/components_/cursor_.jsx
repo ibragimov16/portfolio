@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-const Cursor = () => {
+function Cursor() {
   const cursorRef = useRef(null);
 
   const setPosition = ({ x, y }) => {
@@ -30,6 +30,6 @@ const Cursor = () => {
       <div className="custom-cursor__dot" />
     </div>
   );
-};
+}
 
 export default Cursor;

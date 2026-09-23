@@ -1,15 +1,15 @@
-import project1 from 'assets/img/project-1.webp';
-import project2 from 'assets/img/project-2.webp';
-import project3 from 'assets/img/project-3.webp';
-import project4 from 'assets/img/project-4.webp';
-import project5 from 'assets/img/project-5.webp';
-import project6 from 'assets/img/project-6.webp';
-import project7 from 'assets/img/project-7.webp';
-import project8 from 'assets/img/project-8.webp';
-import project9 from 'assets/img/project-9.webp';
-import project10 from 'assets/img/project-10.webp';
-import project11 from 'assets/img/project-11.webp';
-import project12 from 'assets/img/project-12.webp';
+import project1 from '@/assets/img/project-1.webp';
+import project2 from '@/assets/img/project-2.webp';
+import project3 from '@/assets/img/project-3.webp';
+import project4 from '@/assets/img/project-4.webp';
+import project5 from '@/assets/img/project-5.webp';
+import project6 from '@/assets/img/project-6.webp';
+import project7 from '@/assets/img/project-7.webp';
+import project8 from '@/assets/img/project-8.webp';
+import project9 from '@/assets/img/project-9.webp';
+import project10 from '@/assets/img/project-10.webp';
+import project11 from '@/assets/img/project-11.webp';
+import project12 from '@/assets/img/project-12.webp';
 
 export const projects = [
   {

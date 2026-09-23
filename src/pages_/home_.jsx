@@ -1,13 +1,13 @@
-import deviceStore, { deviceOrientationStatuses } from 'store/deviceStore';
-import { telegramLink, telegramNickname } from 'config';
+import deviceStore, { deviceOrientationStatuses } from '@/deviceStore';
+import { telegramLink, telegramNickname } from '@/config';
+import graphicsStore from '@/graphicsStore';
 import { useEffect, useState } from 'react';
-import { projects } from 'data/projects';
-import { graphicsStore } from 'store';
+import { projects } from '@/data/projects';
 import { observer } from 'mobx-react';
 
-import Project from 'Components/Project';
+import Project from '@/components_/project_';
 
-const Home = observer(() => {
+function Home() {
   const [mobileStartState, setMobileStartState] = useState(true);
 
   const onScroll = () => {
@@ -86,6 +86,6 @@ const Home = observer(() => {
       </div>
     </section>
   );
-});
+}
 
-export default Home;
+export default observer(Home);
