@@ -3,12 +3,12 @@ import { projects } from '@/data/projects';
 import gsap from 'gsap';
 
 import { AmbientLight, Box3, Clock, Color, Euler, Group, Scene, Vector3 } from 'three';
-import DeviceOrientationControls from './core_/device-orientation-controls';
-import Controls from './core_/controls';
-import Renderer from './core_/renderer';
-import Camera from './core_/camera';
-import Plane from './plane_';
-import Text from './text_';
+import DeviceOrientationControls from './core/device-orientation-controls';
+import Controls from './core/controls';
+import Renderer from './core/renderer';
+import Camera from './core/camera';
+import Plane from './plane';
+import Text from './text';
 
 class Store {
   initialized = false;
