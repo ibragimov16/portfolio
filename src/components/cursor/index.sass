@@ -1,3 +1,7 @@
+@use '@/assets/sass/animation.sass'
+@use '@/assets/sass/mixin.sass'
+@use '@/assets/sass/vars.sass'
+
 .custom-cursor
   --cursor-x: -10
   --cursor-y: -10
@@ -19,7 +23,7 @@
     width: 16px
     height: 16px
     border-radius: 10px
-    background-color: $white
+    background-color: vars.$white
     transition-property: transform, opacity, border-radius, width, height, background-color
     transition-duration: 300ms
     transition-timing-function: cubic-bezier(.3,.1,.2,1)

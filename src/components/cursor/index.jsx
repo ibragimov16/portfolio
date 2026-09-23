@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 
+import './index.sass';
+
 function Cursor() {
   const cursorRef = useRef(null);
 

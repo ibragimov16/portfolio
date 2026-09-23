@@ -2,6 +2,8 @@ import graphicsStore from '@/graphicsStore';
 import { observer } from 'mobx-react';
 import { useEffect } from 'react';
 
+import './index.sass';
+
 function Canvas() {
   const getContainer = () => document.querySelector('.canvas');
 

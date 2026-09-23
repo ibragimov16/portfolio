@@ -5,7 +5,9 @@ import { useEffect, useState } from 'react';
 import { projects } from '@/data/projects';
 import { observer } from 'mobx-react';
 
-import Project from '@/components_/project_';
+import Project from '@/components/project';
+
+import './home.sass';
 
 function Home() {
   const [mobileStartState, setMobileStartState] = useState(true);

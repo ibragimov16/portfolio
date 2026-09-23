@@ -1,8 +1,8 @@
 import { useLayoutEffect } from 'react';
 
-import Canvas from '@/components_/canvas_';
-import Cursor from '@/components_/cursor_';
-import Home from '@/pages_/home_';
+import Canvas from '@/components/canvas';
+import Cursor from '@/components/cursor';
+import Home from '@/pages/home';
 
 export default function App() {
   useLayoutEffect(() => {

@@ -1,3 +1,8 @@
+@use '@/assets/sass/animation.sass'
+@use '@/assets/sass/mixin.sass'
+@use '@/assets/sass/vars.sass'
+@use 'sass:color'
+
 .home-page
   position: relative
   width: 100%
@@ -7,7 +12,7 @@
     display: flex
     align-items: flex-start
     justify-content: flex-start
-    @media #{$tablet}
+    @media #{vars.$tablet}
       flex-direction: column
     .telegram-link
       position: fixed
@@ -18,12 +23,12 @@
       animation: fadeIn 1000ms cubic-bezier(.3,.1,.2,1) forwards
       font-size: 20px
       opacity: 0
-      @media #{$tablet}
+      @media #{vars.$tablet}
         right: 60px
         left: unset
         transform: translate(0, -50%)
         top: 140px
-      @media #{$mobile}
+      @media #{vars.$mobile}
         font-size: 16px
         right: 30px
         top: 100px
@@ -35,7 +40,7 @@
       top: 0
       animation: fadeIn 1000ms cubic-bezier(.3,.1,.2,1) forwards
       opacity: 0
-      @media #{$tablet}
+      @media #{vars.$tablet}
         display: none
       h1
         text-transform: uppercase
@@ -54,11 +59,11 @@
       flex-direction: column
       align-items: flex-start
       justify-content: flex-start
-      @media #{$tablet}
+      @media #{vars.$tablet}
         padding: 100px 60px
         gap: 20px
         width: 100%
-      @media #{$mobile}
+      @media #{vars.$mobile}
         padding: 70px 30px
     .project
       display: flex
@@ -84,9 +89,9 @@
           white-space: nowrap
           width: 100%
           transition: opacity .3s
-          @media #{$tablet}
+          @media #{vars.$tablet}
             font-size: 20vw
-          @media #{$mobile}
+          @media #{vars.$mobile}
             font-size: 23vw
         &-outline
           position: absolute
@@ -94,8 +99,8 @@
           top: 0
           opacity: 0
           color: transparent
-          -webkit-text-stroke: 3px $white
-          text-stroke: 3px $white
+          -webkit-text-stroke: 3px vars.$white
+          text-stroke: 3px vars.$white
       &__id
         margin-left: 2vw
         font-size: 1.25vw
@@ -104,11 +109,11 @@
         padding-top: 0.3vw
         transform: scale(2, 1)
         transform-origin: 0 50%
-        color: transparentize($white, 0.3)
-        @media #{$tablet}
+        color: color.adjust(vars.$white, $alpha: -0.3)
+        @media #{vars.$tablet}
           font-size: 3vw
           margin-left: 3vw
-        @media #{$mobile}
+        @media #{vars.$mobile}
           font-size: 4vw
           margin-left: 4vw
   .mobile-start
@@ -118,7 +123,7 @@
     z-index: 10
     width: 100%
     height: 100%
-    background-color: transparentize($black, 0.5)
+    background-color: color.adjust(vars.$black, $alpha: -0.5)
     backdrop-filter: blur(10px)
     padding: 15vh 30px
     flex-direction: column
@@ -129,7 +134,7 @@
     transition: opacity 500ms cubic-bezier(.3,.1,.2,1)
     opacity: 0
     display: none
-    @media #{$tablet}
+    @media #{vars.$tablet}
       display: flex
     &--active
       pointer-events: unset
@@ -152,10 +157,10 @@
           margin-left: auto
           font-size: inherit
     &__button
-      background-color: transparentize($black, 0.25)
+      background-color: color.adjust(vars.$black, $alpha: -0.25)
       border-radius: 10px
       padding: 13px 0 5px 0
-      border: 2px solid $white
+      border: 2px solid vars.$white
       max-width: 100%
       width: 320px
       animation: fadeInUp 1000ms cubic-bezier(.3,.1,.2,1) forwards
